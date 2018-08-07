@@ -18,5 +18,5 @@ getData()
     console.log(data);
   })
   .catch(function (err) {
-    console.error('Oh no... there was an error', err);
+    console.error('Oh no... there was an error.', err);
   });

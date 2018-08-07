@@ -3,8 +3,8 @@
 function addDiscount(discount) {
 
   return new Promise(function (resolve, reject) {
-    if (discount > 30) {
-      reject("The discount cannot exceed 30");
+    if (discount >= 30) {
+      reject("The maximum discount has been applied.");
     }
 
     setTimeout(function () {
