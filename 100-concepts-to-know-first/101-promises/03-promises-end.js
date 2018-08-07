@@ -8,6 +8,8 @@ function getData() {
         filmName: 'Mission: Impossible - Fallout'
       };
 
+      // TODO: Show what happens if the promise is rejected
+      
       resolve(data);
     }, 250);
   });

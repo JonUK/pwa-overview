@@ -13,6 +13,8 @@ function addDiscount(discount) {
 
 }
 
+// TODO: Show what happens if addDiscount is chained again
+
 addDiscount(10)
   .then(addDiscount)
   .then(function (discount) {
