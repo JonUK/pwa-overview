@@ -11,8 +11,6 @@ self.addEventListener('activate', (event) => {
   console.log('From sw.js.', 'Activate event fired.', event);
 });
 
-// TODO: Add an event listener to the fetch event and console log the URLS
-// TODO: Intercept "*.jpg" files and return a different image using fetch API (event.respondWith)
 self.addEventListener('fetch', (event) => {
   var url = event.request.url;
 
@@ -21,4 +19,5 @@ self.addEventListener('fetch', (event) => {
   if (url.endsWith('.jpg')) {
     event.respondWith(fetch('/201-service-worker-lifecycle/images/dog.jpg'));
   }
+
 });

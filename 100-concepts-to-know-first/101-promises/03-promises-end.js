@@ -4,14 +4,10 @@ function getData() {
   return new Promise(function (resolve, reject) {
 
     setTimeout(function () {
-      var data = {
-        filmName: 'Mission: Impossible - Fallout'
-      };
-
+      resolve({ filmName: 'Mission: Impossible - Fallout' });
       // TODO: Show what happens if the promise is rejected
-      
-      resolve(data);
     }, 250);
+
   });
 }
 

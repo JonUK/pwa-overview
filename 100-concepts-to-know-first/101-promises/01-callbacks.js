@@ -5,11 +5,15 @@ function getData(callback) {
     var data = {
       filmName: 'Mission: Impossible - Fallout'
     };
-    
+
     callback(data);
   }, 250);
 }
 
-getData(function (data) {
+function displayData(data) {
   console.log(data);
-});
+}
+
+getData(displayData);
+
+// TODO: Show the shorter format where an anonymous function used
