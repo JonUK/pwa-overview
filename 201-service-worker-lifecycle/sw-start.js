@@ -13,3 +13,5 @@ self.addEventListener('activate', (event) => {
 
 // TODO: Add an event listener to the fetch event and console log the URLS
 // TODO: Intercept "*.jpg" files and return a different image using fetch API (event.respondWith)
+// TODO: Confirm the svg is not affected
+
