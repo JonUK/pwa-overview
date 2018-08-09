@@ -15,4 +15,5 @@ The steps below show how this can be achieved using `express` (and the `serve-in
 
 
 ### Using Atom to run JavaScript
-The Atom editor has a package `script-runner` allows JavaScript files to be run inside of Atom. The keyboard shortcut is `Alt-X` (or `Ctrl-X` on a Mac).
+The Atom editor has a package `atom-runner` which allows JavaScript files to be run inside of Atom.
+The keyboard shortcut is `Alt+R` (or `Ctrl+R` on a Mac).

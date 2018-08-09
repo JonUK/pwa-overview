@@ -20,4 +20,6 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(fetch('/201-service-worker-lifecycle/images/dog.jpg'));
   }
 
+  // TODO: Also show a new response with text content and how this works on all paths
+
 });
