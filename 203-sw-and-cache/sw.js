@@ -2,28 +2,45 @@
 const IMAGE_CACHE_NAME = 'images-v1.1';
 
 const pathsToCache = [
-  '/', // The server is serving up index.html as the default document
-  '/dog-pics.html', // A second page on the website
-  '/main.js',
-  '/css/styles.css',
+  '/203-sw-and-cache/', // The server is serving up index.html as the default document
+  '/203-sw-and-cache/dog-pics.html', // A second page on the website
+  '/203-sw-and-cache/main.js',
+  '/203-sw-and-cache/css/styles.css',
 
-  '/images/cat1.jpg',
-  '/images/cat2.jpg',
-  '/images/cat3.jpg',
-  '/images/cat4.jpg',
+  '/203-sw-and-cache/images/cat1.jpg',
+  '/203-sw-and-cache/images/cat2.jpg',
+  '/203-sw-and-cache/images/cat3.jpg',
+  '/203-sw-and-cache/images/cat4.jpg',
 
-  '/images/dog1.jpg',
-  '/images/dog2.jpg'
+  '/203-sw-and-cache/images/dog1.jpg',
+  '/203-sw-and-cache/images/dog2.jpg'
 ];
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(IMAGE_CACHE_NAME)
       .then(function(cache) {
-        return cache.addAll(urlsToCache);
+        return cache.addAll(pathsToCache);
       })
   );
 });
+
+// self.addEventListener('fetch', function(event) {
+//   event.respondWith(
+//
+//     caches.match(event.request) // Try and find the item in any of the caches
+//       .then(function(response) {
+//
+//         if (response) { // If we have a cache hit return it else get from the network
+//           return response;
+//         }
+//
+//         return fetch(event.request);
+//       })
+//   );
+// });
+
+
 
 
 
