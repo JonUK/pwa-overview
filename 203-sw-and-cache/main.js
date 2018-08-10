@@ -1,5 +1,4 @@
 
-
 if ('serviceWorker' in navigator) {
   console.log('Congratulations! You have a modern browser which supports service worker.');
 

@@ -1,0 +1,9 @@
+{
+  "photos": [
+    { "id": 1, "title": "Cute chat pic 1" }
+  ],
+  "comments": [
+    { "id": 1, "name": "Mike", "body": "I just love this photo", "photoId": 1 },
+    { "id": 2, "name": "Jane", "body": "Yer I love this one as well", "photoId": 1 }
+  ]
+}
