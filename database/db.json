@@ -1,9 +1,62 @@
 {
   "photos": [
-    { "id": 1, "title": "Cute chat pic 1" }
+    {
+      "id": 1,
+      "filename": "cat1.jpg",
+      "title": "Cat looking up"
+    },
+    {
+      "id": 2,
+      "filename": "cat2.jpg",
+      "title": "Cat having a nap"
+    },
+    {
+      "id": 3,
+      "filename": "cat3.jpg",
+      "title": "Another cat having a doze"
+    },
+    {
+      "id": 4,
+      "filename": "cat4.jpg",
+      "title": "Cat with hunting eyes!"
+    }
   ],
   "comments": [
-    { "id": 1, "name": "Mike", "body": "I just love this photo", "photoId": 1 },
-    { "id": 2, "name": "Jane", "body": "Yer I love this one as well", "photoId": 1 }
+    {
+      "id": 1,
+      "name": "Darren",
+      "body": "This is the cutest thing ever",
+      "photoId": 1
+    },
+    {
+      "id": 2,
+      "name": "Cristina",
+      "body": "My cat makes this face too",
+      "photoId": 1
+    },
+    {
+      "id": 3,
+      "name": "Roger",
+      "body": "Too cute for the Internet!",
+      "photoId": 1
+    },
+    {
+      "id": 4,
+      "name": "Jodi",
+      "body": "I just want to squeeze it",
+      "photoId": 2
+    },
+    {
+      "id": 5,
+      "name": "Irvin",
+      "body": "He looks very happy!",
+      "photoId": 3
+    },
+    {
+      "id": 6,
+      "name": "Catherine",
+      "body": "Night vision eyes!",
+      "photoId": 4
+    }
   ]
 }
