@@ -1,20 +1,38 @@
 
 body {
     margin: 20px;
+    font-family: Tahoma, serif
 }
 
-@media screen and (min-width: 1240px) {
+@media screen and (min-width: 1040px) {
     body {
-        width: 1200px;
+        width: 1000px;
         margin: 20px auto;
     }
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 a {
     color: #6666FF;
 }
 
-.cats-list {
+.breadcrumb {
+    margin: 2px 0 15px 0;
+}
+
+#cat-photos {
     list-style: outside none none;
     margin: 0;
     padding: 0;
@@ -25,30 +43,46 @@ a {
     grid-template-columns: repeat(1, 1fr);
 }
 
-@media screen and (min-width: 680px) {
-    .cats-list {
+@media screen and (min-width: 600px) {
+    #cat-photos {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media screen and (min-width: 1000px) {
-    .cats-list {
+@media screen and (min-width: 800px) {
+    #cat-photos {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-.cats-list li {
+#cat-photos li {
     display: block;
-    background-color: #fff;
     border: 2px solid #ccc;
     margin: 0;
-    padding: 15px;
+    padding: 12px;
     text-align: left;
 }
 
-.cats-list h2 {
+#cat-photos h2 {
     margin-top: 0;
 }
+
+#image-container {
+    border: 2px solid #ccc;
+    padding: 8px;
+}
+
+.comment {
+    border: 2px solid #ccc;
+    margin-bottom: 15px;
+    padding: 20px;
+
+}
+
+.comment .name {
+    font-weight: bold;
+}
+
 
 
 

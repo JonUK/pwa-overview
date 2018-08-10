@@ -16,15 +16,23 @@
 
     <h1>Cat photos of the day</h1>
 
-    <div class="breadcrumb">Home</div>
+    <div id="breadcrumb" class="breadcrumb">
+        <a href="/204-indexeddb/">Home</a>
+        /
+        <span id="breadcrumb-page-name"></span>
+    </div>
 
-    <ul id="cat-photos">
-    </ul>
+    <div id="image-container">
+    </div>
+
+    <h2>Comments</h2>
+
+    <div id="comments-container"></div>
 
     <script src="js/sw-register.js" type="text/javascript"></script>
 
     <script src="js/data-access.js" type="text/javascript"></script>
-    <script src="js/photos-listing.js" type="text/javascript"></script>
+    <script src="js/photo.js" type="text/javascript"></script>
 
 </body>
 </html>
