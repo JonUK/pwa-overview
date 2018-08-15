@@ -2,7 +2,10 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   DataAccess.getAllPhotos()
-    .then(fillPhotosHtml);
+    .then(fillPhotosHtml)
+    .catch(err => {
+      console.error('An error occurred attempting to get all the photos.', err);
+    })
 
 });
 
