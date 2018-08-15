@@ -1,9 +1,9 @@
 
-// if ('serviceWorker' in navigator) {
-//   console.log('Congratulations! You have a modern browser which supports service worker.');
-//
-//   navigator.serviceWorker.register('sw.js')
-//     .then(registration => {
-//       console.log('From main.js.', 'The service worker was registered.');
-//     });
-// }
+if ('serviceWorker' in navigator) {
+  console.log('Congratulations! You have a modern browser which supports service worker.');
+
+  navigator.serviceWorker.register('sw.js')
+    .then(registration => {
+      console.log('From main.js.', 'The service worker was registered.');
+    });
+}

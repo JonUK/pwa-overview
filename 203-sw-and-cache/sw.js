@@ -1,5 +1,5 @@
 
-const IMAGE_CACHE_NAME = 'images-v1.1';
+const STATIC_CACHE_NAME = 'static-v1.1';
 
 const pathsToCache = [
   '/203-sw-and-cache/', // The server is serving up index.html as the default document
@@ -18,7 +18,7 @@ const pathsToCache = [
 
 self.addEventListener('install', function(event) {
   event.waitUntil(
-    caches.open(IMAGE_CACHE_NAME)
+    caches.open(STATIC_CACHE_NAME)
       .then(cache => {
         return cache.addAll(pathsToCache);
       })
