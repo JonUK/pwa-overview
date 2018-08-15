@@ -2,18 +2,18 @@
 const IMAGE_CACHE_NAME = 'cat-photos-v1.1';
 
 const pathsToCache = [
-  '/204-indexeddb/', // The server is serving up index.html as the default document
-  '/204-indexeddb/css/styles.css',
+  '/205-indexeddb/', // The server is serving up index.html as the default document
+  '/205-indexeddb/css/styles.css',
 
-  '/204-indexeddb/js/data-access.js',
-  '/204-indexeddb/js/photo.js',
-  '/204-indexeddb/js/photos-listing.js',
-  '/204-indexeddb/js/sw-register.js',
+  '/205-indexeddb/js/data-access.js',
+  '/205-indexeddb/js/photo.js',
+  '/205-indexeddb/js/photos-listing.js',
+  '/205-indexeddb/js/sw-register.js',
 
-  '/204-indexeddb/images/cat1.jpg',
-  '/204-indexeddb/images/cat2.jpg',
-  '/204-indexeddb/images/cat3.jpg',
-  '/204-indexeddb/images/cat4.jpg'
+  '/205-indexeddb/images/cat1.jpg',
+  '/205-indexeddb/images/cat2.jpg',
+  '/205-indexeddb/images/cat3.jpg',
+  '/205-indexeddb/images/cat4.jpg'
 ];
 
 self.addEventListener('install', event => {
@@ -30,7 +30,7 @@ self.addEventListener('fetch', event => {
   const url = event.request.url;
 
   if (url.startsWith('http://localhost:3000')) {
-    return; // We don't want the service worker to anything with API calls
+    return; // Don't attempt to handle API requests
   }
 
   event.respondWith(
@@ -46,7 +46,6 @@ self.addEventListener('fetch', event => {
       })
   );
 });
-
 
 
 

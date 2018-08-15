@@ -1,19 +1,11 @@
 
-const STATIC_CACHE_NAME = 'static-v1.1';
+const STATIC_CACHE_NAME = 'static-v1.2';
 
 const pathsToCache = [
-  '/203-sw-and-cache/', // The server is serving up index.html as the default document
-  '/203-sw-and-cache/dog-pics.html', // A second page on the website
-  '/203-sw-and-cache/main.js',
-  '/203-sw-and-cache/css/styles.css',
-
-  '/203-sw-and-cache/images/cat1.jpg',
-  '/203-sw-and-cache/images/cat2.jpg',
-  '/203-sw-and-cache/images/cat3.jpg',
-  '/203-sw-and-cache/images/cat4.jpg',
-
-  '/203-sw-and-cache/images/dog1.jpg',
-  '/203-sw-and-cache/images/dog2.jpg'
+  '/204-indexeddb-basics/', // The server is serving up index.html as the default document
+  '/204-indexeddb-basics/data-access.js',
+  '/204-indexeddb-basics/idb.js',
+  '/204-indexeddb-basics/main.js'
 ];
 
 self.addEventListener('install', function(event) {
@@ -30,7 +22,7 @@ self.addEventListener('fetch', event => {
   const url = event.request.url;
 
   if (url.startsWith('http://localhost:3000')) {
-    return; // We don't want the service worker to anything with API calls
+    return; // Don't attempt to handle API requests
   }
 
   event.respondWith(

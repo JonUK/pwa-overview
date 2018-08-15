@@ -1,5 +1,4 @@
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
   let photoId = getQueryStringValue('id');
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
       console.error('An error occurred.', err);
     })
 
-
 });
 
 function fillPageHtml(photo, comments) {
@@ -32,7 +30,7 @@ function fillPageHtml(photo, comments) {
 
   const imageContainer = document.getElementById('image-container');
   const image = document.createElement('img');
-  image.src = `/204-indexeddb/images/${photo.filename}`;
+  image.src = `/205-indexeddb/images/${photo.filename}`;
   imageContainer.append(image);
 
   const commentsContainer = document.getElementById('comments-container');
