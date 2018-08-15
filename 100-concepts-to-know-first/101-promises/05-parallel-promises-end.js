@@ -16,6 +16,6 @@ function slowGetData() {
 }
 
 Promise.all([fastGetData(), slowGetData()])
-  .then((values) => {
+  .then(values => {
     console.log(values);
   });

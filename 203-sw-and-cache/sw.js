@@ -19,17 +19,17 @@ const pathsToCache = [
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(IMAGE_CACHE_NAME)
-      .then(function(cache) {
+      .then(cache => {
         return cache.addAll(pathsToCache);
       })
   );
 });
 
-// self.addEventListener('fetch', function(event) {
+// self.addEventListener('fetch', event => {
 //   event.respondWith(
 //
 //     caches.match(event.request) // Try and find the item in any of the caches
-//       .then(function(response) {
+//       .then(response => {
 //
 //         if (response) { // If we have a cache hit return it else get from the network
 //           return response;

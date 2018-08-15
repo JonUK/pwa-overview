@@ -16,13 +16,13 @@ function slowGetData() {
 }
 
 fastGetData()
-  .then(function(fastData) {
+  .then(fastData => {
     console.log(fastData);
     return slowGetData(); // The return from this function is another promise
   })
-  .then(function (slowData) {
+  .then(slowData => {
     console.log(slowData);
   })
-  .catch(function (err) {
+  .catch(err => {
     console.error(err); // If either promise rejects, catch is executed
   });

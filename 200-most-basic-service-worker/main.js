@@ -7,7 +7,7 @@ if ('serviceWorker' in navigator) {
   // The service worker only can run and work within the location.
   // TODO: Show the scope of the service worker in Chrome DevTools.
   navigator.serviceWorker.register('sw.js')
-    .then((registration) => {
+    .then(registration => {
       console.log('From main.js.', 'The service worker was registered.');
     });
 }

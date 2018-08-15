@@ -3,7 +3,7 @@
 if (window.caches) {
 
   caches.open('images-cache')
-    .then((cache) => {
+    .then(cache => {
       cache.add('/202-cache-api/images/cat1.jpg'); // The fetch API will be used behind the scenes
 
       // TODO: Show how multiple requests can be cached via the cache.addAll function
