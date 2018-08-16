@@ -1,6 +1,4 @@
 
-console.log('From sw.js.', 'Hello from the service worker. The JavaScript was parsed OK.');
-
 // Note: When working in a service worker, we refer to the worker itself by the keyword self
 
 self.addEventListener('install', event => {
