@@ -12,5 +12,6 @@ self.addEventListener('activate', event => {
 // TODO: Add an event listener to the fetch event and console log the URLs
 // TODO: Intercept "*.jpg" files and return a different image (dog.jpg) using fetch API (event.respondWith)
 // TODO: Confirm the svg is not affected
+// TODO: Respond to the page request with a fixed response
 
 // https://developer.mozilla.org/en-US/docs/Web/API/FetchEvent
