@@ -3,9 +3,11 @@ const IMAGE_CACHE_NAME = 'cat-photos-v1.1';
 
 const pathsToCache = [
   '/205-indexeddb/', // The server is serving up index.html as the default document
+  '/205-indexeddb/photo.html',
   '/205-indexeddb/css/styles.css',
 
   '/205-indexeddb/js/data-access.js',
+  '/205-indexeddb/js/idb.js',
   '/205-indexeddb/js/photo.js',
   '/205-indexeddb/js/photos-listing.js',
   '/205-indexeddb/js/sw-register.js',
@@ -35,7 +37,7 @@ self.addEventListener('fetch', event => {
 
   event.respondWith(
 
-    caches.match(event.request) // Try and find the item in any of the caches
+    caches.match(event.request, { ignoreSearch: true }) // Ignore query string values
       .then(response => {
 
         if (response) { // If we have a cache hit return it else get from the network

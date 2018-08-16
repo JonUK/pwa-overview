@@ -35,9 +35,14 @@ function fillPageHtml(photo, comments) {
 
   const commentsContainer = document.getElementById('comments-container');
 
-  comments.forEach(comment => {
-    commentsContainer.append(getCommentHtml(comment));
-  })
+  if (comments === null) {
+    commentsContainer.appendChild(document.createTextNode('Unable to retrieve comments at this time'));
+  } else {
+    comments.forEach(comment => {
+      commentsContainer.append(getCommentHtml(comment));
+    })
+  }
+
 }
 
 function getCommentHtml(comment) {
@@ -48,7 +53,6 @@ function getCommentHtml(comment) {
   const commentName = document.createElement('div');
   commentName.innerText = comment.name;
   commentName.classList.add('name');
-
 
   const commentText = document.createTextNode(comment.body);
 
