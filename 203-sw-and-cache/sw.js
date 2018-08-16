@@ -10,7 +10,9 @@ const pathsToCache = [
   '/203-sw-and-cache/images/cat1.jpg',
   '/203-sw-and-cache/images/cat2.jpg',
   '/203-sw-and-cache/images/cat3.jpg',
-  '/203-sw-and-cache/images/cat4.jpg',
+
+  // TODO: Add this image back to the paths list
+  //'/203-sw-and-cache/images/cat4.jpg',
 
   '/203-sw-and-cache/images/dog1.jpg',
   '/203-sw-and-cache/images/dog2.jpg'
@@ -27,12 +29,6 @@ self.addEventListener('install', function(event) {
 
 self.addEventListener('fetch', event => {
 
-  const url = event.request.url;
-
-  if (url.startsWith('http://localhost:3000')) {
-    return; // We don't want the service worker to anything with API calls
-  }
-
   event.respondWith(
 
     caches.match(event.request) // Try and find the item in any of the caches
@@ -42,6 +38,7 @@ self.addEventListener('fetch', event => {
           return response;
         }
 
+        console.log('Not in cache.', event.request.url);
         return fetch(event.request);
       })
   );
