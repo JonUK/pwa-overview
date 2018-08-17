@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Flexbox Example</title>
+
+    <style>
+
+        body {
+            margin: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            box-sizing: border-box; /* Take into account the padding */
+            width: calc(100% - 10px); /* 10px as 5px added to each side */
+            margin: 5px;
+            padding: 20px;
+            background-color: #CCCCCC;
+        }
+
+        @media screen and (min-width: 500px) {
+          .item {
+            width: calc(50% - 10px); /* 10px as 5px added to each side */
+          }
+        }
+
+        @media screen and (min-width: 700px) {
+          .item {
+            width: calc(33.33% - 10px); /* 10px as 5px added to each side */
+          }
+
+          .item-map {
+            order: -1;
+            background-color: #6666FF;
+            color: white;
+          }
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Flexbox example</h1>
+
+    <h2>With unordered list</h2>
+    <div class="container">
+        <div class="item">Details</div>
+        <div class="item">Comments</div>
+        <div class="item item-map">Map</div>
+    </div>
+
+</body>
+</html>
