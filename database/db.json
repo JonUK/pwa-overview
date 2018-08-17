@@ -58,5 +58,15 @@
       "body": "Night vision eyes!",
       "photoId": 4
     }
+  ],
+  "todos": [
+    {
+      "id": 1,
+      "name": "Wash the car"
+    },
+    {
+      "id": 2,
+      "name": "Watch Jeremy Kyle"
+    }
   ]
 }
