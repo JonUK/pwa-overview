@@ -3,6 +3,6 @@
 
 console.log('From sw.js.', 'Hello from the service worker. The JavaScript was parsed OK.');
 
-// TODO: Add install & activate event handlers
+// TODO: Add install & activate event handlers (at the same time)
 // TODO: Show how new service worker is installed but in "waiting to be active" state
 // TODO: Show scope and clients in the Chrome DevTools
