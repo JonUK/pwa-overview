@@ -10,9 +10,7 @@ const pathsToCache = [
   '/203-sw-and-cache/images/cat1.jpg',
   '/203-sw-and-cache/images/cat2.jpg',
   '/203-sw-and-cache/images/cat3.jpg',
-
-  // TODO: Add this image back to the paths list
-  //'/203-sw-and-cache/images/cat4.jpg',
+  '/203-sw-and-cache/images/cat4.jpg',
 
   '/203-sw-and-cache/images/dog1.jpg',
   '/203-sw-and-cache/images/dog2.jpg'
@@ -31,18 +29,51 @@ self.addEventListener('fetch', event => {
 
   event.respondWith(
 
-    caches.match(event.request) // Try and find the item in any of the caches
-      .then(response => {
+    caches.open(STATIC_CACHE_NAME)
+      .then(cache => {
 
-        if (response) { // If we have a cache hit return it else get from the network
-          return response;
-        }
+        return cache.match(event.request) // Try and find the item in the cache
+          .then(response => {
 
-        console.log('Not in cache.', event.request.url);
-        return fetch(event.request);
+            if (response) { // If we have a cache hit return item else get from the network
+              return response;
+            }
+
+            return fetch(event.request);
+          });
       })
   );
+
+  // TODO: Show this page works fine when offline
+  // TODO: Show there are no true requests being made to the server
+  // TODO: Show how a CSS change is not updated automatically (when update on reload not enabled)
+  // TODO: Show how in Chrome DevTools the bypass for network option can be used
+
 });
+
+// TODO: Change caching strategy to "stale-while-revalidate" (serve from cache then fetch and update cache)
+// self.addEventListener('fetch', event => {
+//
+//   event.respondWith(
+//
+//     caches.open(STATIC_CACHE_NAME)
+//       .then(cache => {
+//
+//         return cache.match(event.request)
+//           .then(responseFromCache => { // Returns "undefined" if not cache match
+//
+//             let fetchPromise = fetch(event.request)
+//               .then(responseFromNetwork => {
+//                 cache.put(event.request, responseFromNetwork.clone()); // A response is "consumable" and can only be used once
+//                 return responseFromNetwork;
+//               });
+//
+//             return responseFromCache || fetchPromise;
+//           })
+//       })
+//   );
+//
+// });
 
 
 
