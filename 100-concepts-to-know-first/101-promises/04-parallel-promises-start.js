@@ -1,5 +1,5 @@
 
-function fastGetData() {
+function getDataFast() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve({ filmName: 'Mission: Impossible - Fallout' });
@@ -7,7 +7,7 @@ function fastGetData() {
   });
 }
 
-function slowGetData() {
+function getDataSlow() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve({ filmName: 'Slender Man' });
@@ -17,3 +17,7 @@ function slowGetData() {
 
 // TODO: Use Promise.all to wait till both promises have resolved
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all#Syntax
+
+
+// TODO: Show ES6 arrow function usage
+// NOTE: Real-world usage is get data where requests / data not dependent on each other

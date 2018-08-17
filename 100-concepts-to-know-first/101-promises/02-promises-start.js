@@ -9,3 +9,4 @@ function getData() {
 }
 
 // TODO: Call the getData function and console log the promise data when resolved
+// TODO: Show how to work with a rejected promise

@@ -1,5 +1,5 @@
 
-function fastGetData() {
+function getDataFast() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve({ filmName: 'Mission: Impossible - Fallout' });
@@ -7,18 +7,18 @@ function fastGetData() {
   });
 }
 
-function slowGetData() {
+function getDataSlow() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve({ filmName: 'Slender Man' });
-    }, 1500); // This one is a bit slower to resolve
+    }, 1000); // This one is a bit slower to resolve
   });
 }
 
-fastGetData()
+getDataFast()
   .then(fastData => {
     console.log(fastData);
-    return slowGetData(); // The return from this function is another promise
+    return getDataSlow(); // The return from this function is another promise
   })
   .then(slowData => {
     console.log(slowData);

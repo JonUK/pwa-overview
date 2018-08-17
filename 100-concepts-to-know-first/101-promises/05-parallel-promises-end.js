@@ -1,5 +1,5 @@
 
-function fastGetData() {
+function getDataFast() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve({ filmName: 'Mission: Impossible - Fallout' });
@@ -7,7 +7,7 @@ function fastGetData() {
   });
 }
 
-function slowGetData() {
+function getDataSlow() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve({ filmName: 'Slender Man' });
@@ -15,7 +15,7 @@ function slowGetData() {
   });
 }
 
-Promise.all([fastGetData(), slowGetData()])
+Promise.all([getDataFast(), getDataSlow()])
   .then(values => {
     console.log(values);
   });
