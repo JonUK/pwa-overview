@@ -22,3 +22,10 @@ For the later examples where AJAX JSON requests / responses are sent to the serv
 ## Using Atom to run JavaScript
 The Atom editor has a package `atom-runner` which allows JavaScript files to be run inside of Atom.
 The keyboard shortcut is `Alt+R` (or `Ctrl+R` on a Mac).
+
+## Getting and setting Git name & email
+`git config user.name`<br />
+`git config user.name "Mona Lisa"`<br />
+
+`git config user.email`<br />
+`git config user.email "email@example.com"`<br />
