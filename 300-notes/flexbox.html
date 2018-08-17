@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Flexbox Example</title>
+
+    <style>
+
+        body {
+            margin: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .item {
+            box-sizing: border-box; /* Take into account the padding */
+            width: calc(33.33% - 10px); /* 10px as 5px added to each side */
+            margin: 5px;
+            padding: 20px;
+            background-color: #CCCCCC;
+        }
+
+
+        /* Flexbox applied to unordered list */
+
+        ul.container {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Flexbox example</h1>
+
+    <h2>With unordered list</h2>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <br>
+
+    <h2>With normal divs</h2>
+    <ul class="container">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+    </ul>
+
+</body>
+</html>

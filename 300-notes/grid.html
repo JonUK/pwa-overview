@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Grid Example</title>
+
+    <style>
+
+        body {
+            margin: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        .container {
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr; */ /* Longhand way to write */
+            grid-template-columns: repeat(3, 1fr); /* Shorthand way to write */
+        }
+
+        .item {
+            margin: 5px;
+            padding: 20px;
+            background-color: #CCCCCC;
+        }
+
+        /* Flexbox applied to unordered list */
+
+        ul.container {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Grid example</h1>
+
+    <h2>With unordered list</h2>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+    <br>
+
+    <h2>With normal divs</h2>
+    <ul class="container">
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li class="item">3</li>
+        <li class="item">4</li>
+        <li class="item">5</li>
+    </ul>
+
+</body>
+</html>
