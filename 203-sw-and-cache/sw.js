@@ -10,7 +10,8 @@ const pathsToCache = [
   '/203-sw-and-cache/images/cat1.jpg',
   '/203-sw-and-cache/images/cat2.jpg',
   '/203-sw-and-cache/images/cat3.jpg',
-  '/203-sw-and-cache/images/cat4.jpg',
+
+  //'/203-sw-and-cache/images/cat4.jpg', The cat 4 photo is not in the cache
 
   '/203-sw-and-cache/images/dog1.jpg',
   '/203-sw-and-cache/images/dog2.jpg'

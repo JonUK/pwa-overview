@@ -1,4 +1,6 @@
 
+// NOTE: The Cache interface provides a storage mechanism for Request / Response object pairs
+
 // Progressive enhancement / feature detection (inside Service Worker we know this will be available)
 if (window.caches) {
 
