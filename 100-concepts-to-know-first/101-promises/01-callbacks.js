@@ -7,7 +7,7 @@ function getData(callback) {
     };
 
     callback(data);
-  }, 250);
+  }, 500);
 }
 
 function displayData(data) {
