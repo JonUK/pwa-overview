@@ -18,6 +18,9 @@ For the later examples where AJAX JSON requests / responses are sent to the serv
 1. Install `json-server` globally with the command `npm install -g json-server`
 2. Start the server by running `json-server --watch database/db.json`.
 
+## Using Visual Studio Code to run JavaScript
+VSCode has an extension `Code Runner` which allows JavaScript files to be run inside of VSCode.
+The keyboard shortcut is Ctrl+Alt+N.
 
 ## Using Atom to run JavaScript
 The Atom editor has a package `atom-runner` which allows JavaScript files to be run inside of Atom.
