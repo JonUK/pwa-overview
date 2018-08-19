@@ -42,12 +42,7 @@ DataAccess.getAllPhotos()
 
 // TODO: Use the method DataAccess.getAllPhotosWithDbFallback to get photos which
 // should work offline once the photos data has been retrieved once.
-DataAccess.getAllPhotosWithDbFallback()
-  .then(photos => {
-    console.log('All photos from server or offline DB.', photos);
-  });
-
-
-
-
-
+// DataAccess.getAllPhotosWithDbFallback()
+//   .then(photos => {
+//     console.log('All photos from server or offline DB.', photos);
+//   });
