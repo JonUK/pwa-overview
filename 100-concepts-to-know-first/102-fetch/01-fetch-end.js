@@ -20,4 +20,4 @@ fetch('http://localhost:3000/todos', {
   headers: {
     'content-type': 'application/json'
   }
-})
+});

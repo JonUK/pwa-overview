@@ -9,9 +9,9 @@ DataAccess.getAllPhotos()
     console.log('All photos from server.', photos);
   });
 
-
+// TODO: Ensure update on reload is enabled
 // TODO: Show how a new database is created and a new store
-// var dbPromise = idb.open('films-db', 1, upgradeDb => {
+// let dbPromise = idb.open('films-db', 1, upgradeDb => {
 //   let store = upgradeDb.createObjectStore('films', { keyPath: 'filmId' }); // keyPath is the unique id for item in store
 // });
 
